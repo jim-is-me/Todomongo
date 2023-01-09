@@ -16,6 +16,10 @@ router.get('/:id', async(req,res) => {
     }
 })
 
+router.get("/get",(request,response)=>{
+    response.send("hello world");
+})
+
 
 router.post('/', async(req,res) => {
     const todo = new Todo.Todo({
