@@ -17,7 +17,11 @@ router.get('/:id', async(req,res) => {
 })
 
 router.get("/get",(request,response)=>{
-    response.send("hello world");
+    response.send("hello everyone");
+})
+
+router.get("/prem",(request,response)=>{
+    response.send("hello prem");
 })
 
 
