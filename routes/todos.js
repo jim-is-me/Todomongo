@@ -18,6 +18,7 @@ router.get('/:id', async(req,res) => {
 
 
 router.post('/', async(req,res) => {
+    console.log(req.body,"wht up")
     const todo = new Todo.Todo({
         title: req.body.data.title,
         description: req.body.data.description,
