@@ -16,15 +16,6 @@ router.get('/:id', async(req,res) => {
     }
 })
 
-router.get("/get",(request,response)=>{
-    response.send("hello everyone");
-})
-
-router.get("/prem",(request,response)=>{
-    response.send("hello prem");
-})
-
-
 router.post('/', async(req,res) => {
     const todo = new Todo.Todo({
         title: req.body.data.title,
@@ -37,17 +28,6 @@ router.post('/', async(req,res) => {
         res.json(t1)
     }catch(err){
         console.log(err,"errpr");
-        res.send('Error')
-    }
-})
-
-router.patch('/:id',async(req,res)=> {
-    try{
-        const todo = await Todo.Todo.findById(req.params.id) 
-        todo.sub = req.body.sub
-        const a1 = await todo.save()
-        res.json(a1)   
-    }catch(err){
         res.send('Error')
     }
 })
